@@ -1,0 +1,138 @@
+<!--1.Creați o pagină numită index.html. Adăugați doctype și setați limba documentului în tagul html-->
+<!DOCTYPE html>
+<html lang="ro">
+
+	<head>
+		<!--2.Folositi 4 taguri meta relevante pentru a specifica: charset-ul, autorul, cuvintele cheie, descrierea.-->
+		<meta charset="UTF-8">
+		<meta name="keywords" content="telefon, telefoane, gsm, service">
+		<meta name="description" content="Magazin de telefoane si gsm"> <!-- are relevanta pentru google, trebuie sa contina cuvintele de cautare pentru a fi relevant pe goole-->
+		<meta name="author" content="Preda Alexandru-Florin">
+
+		<!-- 3.Adaugati un title corespunzator continutului textului-->
+		<title>Magazin de telefoane si gsm - Home</title>
+		<!-- 4.Adaugati un favicon relevant pentru temă.-->
+		<link rel="shortcut icon" type = "image/x-icon" href="./favicon.ico">
+	</head>
+	
+	<!-- 5.Împărțiți body-ul în header, main, footer-->
+	<body>
+		<header>
+			<h1>Tech&Repair</h1>
+			<!-- 7.Folosiți minim un tag dintre: section, article, aside.-->
+			<section id="prezentare">
+				<h2 >Prezentare</h2>
+				<!--10. În cadrul textului îndepliniți 3 dintre cerințele de mai jos, la alegere:
+					a. marcați cuvintele și sintagmele cheie cu ajutorul tagului b
+					b. marcați textul de atenționare cu strong
+					c. marcați textul șters (corectat sau care nu mai e relevant) cu tagul s și textul inserat în loc cu tagul ins-->
+				<p>Aici gasiti cele mai tari <b>telefoane</b>! La propriu!!</p>
+				<p><strong>Reduceri de pana la 20%</strong> in urmatoarele 2 saptamani!</p>
+				<p>cel mai ieftin telefon la <s>850</s> <ins>799</ins></p>
+			</section>
+
+			<hr>
+			
+			<!--6. În header faceți un sistem de navigare.-->
+			<nav>
+				<!--8. În cadrul secțiunilor folosiți minim 2 taguri dintre următoare taguri de grupare: p, ol, ul, blockquoute, dl.-->
+				<ul>
+					<!--11.Creați următoarele linkuri speciale: un link extern (se va deschide in fereastră nouă)-->
+					<li><a href="index.html">logoul magazinului</a></li>
+					
+					<li>Search bar</li>
+
+					<li>contact service gsm</li>
+
+					<li>cos de cumparaturi</li>
+				</ul>
+			</nav>
+			
+			<hr>
+
+		</header>
+
+		<main>
+
+			<section id="lista_telefoane">
+			<h3>Telefoane Mobile:</h3>
+			<nav>
+				<ul>
+					<li><a href="iphone.html">Iphone</a></li>
+					<li><a href="samsung.html">Samsung</a></li>
+					<li><a href="huawei.html">Huawei</a></li>
+					<li><a href="OnePlus.html">OnePlus</a></li>
+				</ul>
+			</nav>
+			</section>
+
+			<hr>
+
+			<!--12. Creați în pagină mai multe zone de details și summary(pot fi niște oferte pentru care afișăm titlul și utilizatorul le deschide pe cele care îl interesează)-->
+			<section id="oferte">
+			<h3>Oferte speciale si produse noi!</h3>
+			<img src="Telefon_SAMSUNG_Galaxy_A12S_64GB_4GB_RAM_.jpg" alt="Samsung A12S">
+			<p>Telefon SAMSUNG Galaxy A12 4G, 64GB, 4GB RAM</p>
+			<s>850</s> <ins>799 LEI</ins>
+			</section>
+
+			<hr>
+
+			<!--11.Creați următoarele linkuri speciale: 2 linkuri care se deschid într-un iframe (se poate face ca în exemplul de curs, linkuri care deschid videoclipuri relevante de pe youtube în iframe)-->
+
+			<a href="https://www.youtube.com/embed/V7ixp-XwqGI" target="ifr-video">10% reduceri la noile produse samsung!</a>
+
+			<a href="https://www.youtube.com/embed/jtl4KKRIheo" target="ifr-video" >Oferim servicii de reparare si reconditionare a telefoanelor mobile!</a>
+
+
+			<iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/V7ixp-XwqGI" 
+
+			frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+
+
+
+			<hr>
+			<section id="FAQ">
+				<h2>
+					Intrebari frecvente:
+				</h2>
+				<details>
+					<summary>Unde se afla magazinul?</summary>
+					<p> Magazinul se afla pe Bulevardul Iuliu Maniu nr. 7, București 061072</p>
+				</details>
+
+				<details>
+					<summary>Ce telefoane reparati?</summary>
+					<p>Reparam orice tip de telefon gasit pe piata!</p>
+				</details>
+
+				<details>
+					<summary>Programul de lucru?</summary>
+					<p>
+						Luni-Vineri:09-19<br>
+						Sambata-Duminica:09-13<br>
+					</p>
+				</details>
+			</section>
+			
+			<hr>
+		</main>
+			
+		<footer>
+			<!--11.Creați următoarele linkuri speciale: un link în footer către începutul paginii-->
+			<a href=#prezentare>Inapoi sus</a>
+			<!--13.În footer se vor adăuga cu ajutorul tagului address informații de contact (telefon fictiv, marcată cu tagul a corespunzător, adresă fictivă, e-mail fictiv, marcat cu tagul a corespunzător)-->
+			<address>
+				Telefon: <a href="tel:0735-998-673">0735998673</a><br>
+				Adresa: Bulevardul Iuliu Maniu nr. 7, București 061072<br>
+				E-mail: <a href="mailto:info_mobileshop@yahoo.com">info_mobileshop@yahoo.com</a>
+			</address>
+			<!--14. În footer se va adăuga informație de copyright, folosind tagul small, simbolul specific de copyright cu codul html necesar (forma &cod;) și data creării paginii scrisă în limba română și pusă în tagul time cu atributul datetime corespunzător. -->
+			<small>Copyright &copy; <time datetime="2021-10-10">2021</time> Preda Alexandru-Florin</small>
+		</footer>
+	</body>
+</html> 
