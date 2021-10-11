@@ -33,7 +33,7 @@
 ---
 
 
-#Check listă
+# Check listă
 
 - [x] Etapa 1
 - [ ] Etapa 2
