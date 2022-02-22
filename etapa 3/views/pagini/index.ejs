@@ -1,0 +1,72 @@
+	<!--1.Creați o pagină numită index.html. Adăugați doctype și setați limba documentului în tagul html-->
+<!DOCTYPE html>
+<html lang="ro">
+
+	<head>
+        <meta name="keywords" content="telefon, telefoane, gsm, service, AxP">
+		<meta name="description" content="Got it!"> 
+		<title>Magazin de telefoane si gsm - Home</title>
+        <%- include("../fragmente/head.ejs") %>
+	</head>
+	
+	<body>
+		<main>
+            <%- include("../fragmente/header.ejs") %>
+            <h2><a href="/doi">PG.DOI</a> </h2>
+            <div id="container">
+                <!-- prezentare -->
+                <div id="prezentare">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum neque eget porta vehicula. Suspendisse potenti. Praesent facilisis purus eu est consequat fringilla. Ut sagittis ligula et nibh feugiat finibus. Vestibulum finibus lectus dolor, nec dapibus tortor vulputate id. Fusce elementum molestie nisl, eget venenatis nunc pellentesque sed. Fusce iaculis porttitor enim, vitae volutpat mauris posuere sit amet. In hac habitasse platea dictumst. Vestibulum vel lacus ut purus hendrerit porta. Proin nec efficitur justo, at venenatis massa. Aenean euismod ipsum ut nulla porttitor, sed mattis quam fermentum. Nam tincidunt neque vel libero ornare iaculis. Aliquam vel orci accumsan, venenatis mi id, fermentum odio. Nulla facilisis justo et odio aliquet sollicitudin. Morbi mattis dolor est, id fermentum orci accumsan pellentesque.</p>
+                </div>
+
+                <!-- calendarul pentru evenimente -->
+                <div id="calendarEvenimente">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ex nec ex ullamcorper mollis in nec erat. Quisque vel ornare tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper ex odio, ac hendrerit leo elementum id. Nunc dui mauris, eleifend ut ante sed, interdum commodo mi. Curabitur ut porta dolor, in rutrum nisi. Suspendisse congue, erat et maximus viverra, lacus risus maximus ipsum, nec finibus nunc velit non tortor. Nam dui tortor, ornare ac consequat at, placerat sed neque. </p>
+                </div>
+
+                <!-- tabel -->
+                <div id="tabel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse metus mauris, pharetra in rhoncus in, maximus ac quam. Quisque iaculis nulla id est tincidunt consectetur. Vestibulum pellentesque mi metus, vitae tempor velit malesuada sed. Duis eu lobortis mi, vitae hendrerit nunc. Donec dolor elit, condimentum non accumsan a, porttitor eu massa. Nunc metus mauris, lacinia sed odio at, eleifend convallis massa. Quisque sed nunc a ante consequat lobortis tempus consequat lacus.</p> 
+                </div>
+                
+                <!-- anunturi -->
+                <div id="anunturi">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut sollicitudin est, sed posuere erat. Ut imperdiet egestas neque, sit amet consectetur felis efficitur eu. Praesent eleifend turpis tellus, ac malesuada nisi rhoncus ut. Fusce volutpat semper leo. In congue imperdiet congue. In dignissim ultrices ligula ut fermentum. Sed eu vulputate nulla. Suspendisse ex ante, rhoncus et pulvinar sed, fringilla id tortor. Ut tincidunt sem sed vehicula eleifend. Phasellus enim turpis, interdum ac semper sed, pulvinar id nibh. Phasellus dictum id tortor ut mattis. Nulla mattis blandit egestas. Maecenas nibh enim, feugiat sed leo vel, placerat commodo eros.</p>
+                </div>
+
+                <!-- diverse -->
+                <div id="diverse">
+					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sagittis, nunc id molestie rhoncus, magna libero dignissim lectus, quis dictum enim orci quis velit. Vivamus sed diam nisi. Donec sed cursus arcu, et congue lorem. Nullam diam massa, sodales rutrum fermentum ac, luctus iaculis eros. Phasellus venenatis venenatis viverra. Sed vel vestibulum ante. Donec dapibus laoreet orci, sed ultricies lacus commodo non. Pellentesque ut egestas libero. Pellentesque dictum eleifend pretium. Cras dignissim cursus tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi volutpat purus id augue blandit, sed vulputate orci finibus. Aenean cursus hendrerit ullamcorper.
+                </div>
+                
+                <!-- date despre site -->
+                <div id="dateSite">
+					<p> Maecenas accumsan justo turpis, id viverra nisl tristique nec. Duis tincidunt dictum porta. Proin fringilla, ex non fermentum rhoncus, sapien risus tempor magna, ut pharetra neque diam vel leo. Nam suscipit vulputate ante non rutrum. Aliquam vitae magna ullamcorper, feugiat turpis non, euismod urna. Praesent eu fermentum nisl. Donec vestibulum eu sapien ac ultricies. Nulla egestas ut augue in tempus. Vestibulum id dictum arcu, non tempor urna. Integer tristique enim id pharetra porta. Curabitur tempus, dui eget vestibulum luctus, tortor lorem rhoncus elit, id aliquam dui sapien gravida tellus. Etiam sed arcu blandit, tristique odio vitae, fringilla leo. Suspendisse nulla nisi, lacinia quis fringilla varius, viverra at nisi. Donec tincidunt efficitur elit, vehicula imperdiet lorem gravida suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                
+                <!-- utilizatori online -->
+                <div id="utilizatoriOnline">\
+					<p> Praesent volutpat lorem in risus rutrum, nec luctus leo interdum. Donec ac augue in nulla laoreet aliquet. Nulla lacinia vestibulum elit vel ultricies. Nullam lectus magna, placerat at leo eu, mattis sagittis purus. Praesent dapibus vehicula purus id gravida. Nam sed fringilla tellus, a rhoncus velit. Proin eu quam vitae libero rhoncus feugiat. Praesent semper est vitae lacus ullamcorper porta. Aliquam id scelerisque arcu. Fusce mauris augue, maximus in blandit sed, sollicitudin id sem. Sed sodales cursus ante sit amet laoreet. Integer orci quam, ornare eu tortor a, facilisis suscipit nibh. Etiam pretium consequat enim at placerat. Fusce id dapibus leo. Fusce sollicitudin sapien eget ante bibendum, et placerat libero scelerisque. Suspendisse ut ligula felis. </p>
+                </div>
+
+                <!-- date utilizator si statisitici -->
+                <div id="dateUtilizatorStatisitici">
+					<p> Duis tempus ligula dolor, aliquet cursus quam luctus non. Aenean nec urna euismod, consequat diam a, euismod magna. Fusce ut felis tempus, rutrum purus posuere, tincidunt tellus. Donec aliquam massa vitae ipsum iaculis, ac lacinia elit dictum. Integer eu eleifend arcu. Mauris id varius nisl, viverra venenatis orci. Fusce auctor convallis ligula, quis ornare risus mattis ac. Nulla lacinia rhoncus velit, finibus dignissim massa sagittis faucibus. Curabitur accumsan, quam in tempor pretium, tellus justo fermentum lorem, nec finibus ipsum odio in dolor. Nunc rhoncus mi non felis interdum, eu finibus tortor varius. Proin mattis facilisis ornare. Sed lorem turpis, congue at semper eu, consectetur non lacus.
+                </div>
+            </div>
+
+            
+            <div class="taburi-iframe">
+                <a href="https://www.youtube.com/embed/V7ixp-XwqGI" target="ifr-video">Noile produse samsung!</a>
+                <a href="https://www.youtube.com/embed/jtl4KKRIheo" target="ifr-video" >Oferim servicii de reparare!</a>
+                <a href="https://altex.ro/home/" target="blank" >Magazinul online Altex</a>
+            </div>
+
+            
+            <iframe class="tab-iframe" name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/V7ixp-XwqGI" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		</main>
+        <%- include("../fragmente/footer.ejs") %>
+	</body>
+</html> 
