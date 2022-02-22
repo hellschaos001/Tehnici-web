@@ -1,0 +1,77 @@
+{
+	"cale_galerie":"../resurse/img/galerie/",
+	"imagini": [
+		{
+			"cale_relativa":"1.png",
+			"nume":"Telefon",
+			"descriere":"Telefon ",
+			"timp":"dimineata"
+		},
+		{
+			"cale_relativa":"2.png",
+			"nume":"Telefon",
+			"descriere":"Telefon ",
+			"timp":"zi"
+		},
+		{
+			"cale_relativa":"3.png",
+			"nume":"Telefon",
+			"descriere":"Telefon ",
+			"timp":"zi"
+		},
+		{
+			"cale_relativa":"4.png",
+			"nume":"Telefon",
+			"descriere":"Telefon ",
+			"timp":"noapte"
+		},
+		{
+			"cale_relativa":"5.png",
+			"nume":"Telefon",
+			"descriere":"Telefon ",
+			"timp":"dimineata"
+		},
+		{
+			"cale_relativa":"6.png",
+			"nume":"Telefon",
+			"descriere":"Telefon ",
+			"timp":"zi"
+		},
+		{
+			"cale_relativa":"7.png",
+			"nume":"Telefon",
+			"descriere":"Telefon ",
+			"timp":"zi"
+		},
+		{
+			"cale_relativa":"8.png",
+			"nume":"Telefon",
+			"descriere":"Telefon ",
+			"timp":"noapte"
+		},
+		{
+			"cale_relativa":"9.png",
+			"nume":"Telefon",
+			"descriere":"Telefon ",
+			"timp":"dimineata"
+		},
+		{
+			"cale_relativa":"10.png",
+			"nume":"Telefon",
+			"descriere":"Telefon ",
+			"timp":"zi"
+		},
+		{
+			"cale_relativa":"11.png",
+			"nume":"Telefon",
+			"descriere":"Telefon ",
+			"timp":"zi"
+		},
+		{
+			"cale_relativa":"12.png",
+			"nume":"Telefon",
+			"descriere":"Telefon ",
+			"timp":"noapte"
+		}
+	]
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+	<head>
+        <meta name="keywords" content="telefon, telefoane, gsm, service, AxP">
+		<meta name="description" content="Got it!"> 
+		<link rel="stylesheet" href="/resurse/produs.css" type="text/css" />
+		<title>Magazin de telefoane si gsm - Home</title>
+        <%- include("../fragmente/head.ejs") %>
+	</head>
+	
+	<body>
+		<%- include("../fragmente/header.ejs") %>
+        <main>
+            <section>
+                <h1>Pagină produs</h1>
+                    <article id="art-produs">
+                        <h3><span class="nume"><%- locals.prod.nume %></span></h3>
+                        <p>Pret: <span class="pret"><%- locals.prod.pret %> </span></p>
+                        <p>Descriere: <span class="descriere"><%- locals.prod.descriere %> </span></p>
+                        <p>Specificatii: <span class="specificatii"><%- locals.prod.specificatii %> </span></p>
+                        <p>Tip produs: <span class="tip_produs"><%- locals.prod.tip_produs %> </span></p>
+                        <p>Sistem operare: <span class="sistem_operare"><%- locals.prod.sistem_operare %> </span></p>
+                        <p>Dimensiune: <span class="dimensiune"><%- locals.prod.dimensiune %> </span></p>
+                        <p>Culoare: <span class="culoare"><%- locals.prod.culoare %> </span></p>                  
+                        <p>Data aparitiei
+                        <% 
+                            var d="";
+                            var zi="";
+                            var nume_luna="";
+                            var an="";
+                            var zi_saptamana="";
+                            d=prod.data_lansarii;
+                            nume_luna=String(d).substr(3,4);
+                            an=String(d).substr(7,8);
+                            zi=an.substr(0,3);
+                            //01-12-200
+                            an=an.substr(3);
+                            zi_saptamana=String(d).substr(0,3);
+                            if(nume_luna==" Apr")
+                                nume_luna="Aprilie";
+                            if(nume_luna==" Jan")
+                                nume_luna="Ianuarie";
+                            if(nume_luna==" Feb")
+                                nume_luna="Februarie";
+                            if(nume_luna==" Mar")
+                                nume_luna="Martie";
+                            if(nume_luna==" May")
+                                nume_luna="Mai";
+                            if(nume_luna==" Jun")
+                                nume_luna="Iunie";
+                            if(nume_luna==" Jul")
+                                nume_luna="Iulie";
+                            if(nume_luna==" Oct")
+                                nume_luna="Octombrie";
+                            if(nume_luna==" Sep")
+                                nume_luna="Septembrie";
+                            if(nume_luna==" Nov")
+                                nume_luna="Noiembrie";
+                            if(nume_luna==" Dec")
+                                nume_luna="Decembrie";
+                            if(nume_luna==" Aug")
+                                nume_luna="August";
+
+                            if(zi_saptamana=="Mon")
+                                zi_saptamana="Luni";
+                            if(zi_saptamana=="Tue")
+                                zi_saptamana="Marti";
+                            if(zi_saptamana=="Wed")
+                                zi_saptamana="Miercuri";
+                            if(zi_saptamana=="Thu")
+                                zi_saptamana="Joi";
+                            if(zi_saptamana=="Fri")
+                                zi_saptamana="Vineri";
+                            if(zi_saptamana=="Sat")
+                                zi_saptamana="Sambata";
+                            if(zi_saptamana=="Sun")
+                                zi_saptamana="Duminca";
+                        %>
+                        <span class="data"><%- zi_saptamana %> <%- zi %> <%- nume_luna %> <%- an %>  </span></p>
+                        
+
+                        <p>
+                            Promotie:
+                            <%
+                                    var rez="";
+                                    if(prod.promotie==true)
+                                        rez="Da";
+                                    else
+                                        rez="Nu";
+                            %>
+                            <span class="promotie"><%- rez %></span>
+                        </p>
+
+
+
+                        <figure class="imag-produs">
+                            <img  src="/resurse/img/produse/<%- locals.prod.imagine %>" alt="[imagine <%- locals.prod.nume %>]" />
+                        </figure>    
+                    </article>
+                
+            </section>
+        </main>
+        <%- include("../fragmente/footer.ejs") %>
+	</body>
+</html> 

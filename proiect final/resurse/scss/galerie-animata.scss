@@ -1,0 +1,182 @@
+*{
+  margin:0;
+  padding:0;
+  }
+  
+  body{
+  }
+  .galerie{
+    background-image: "resurse/img/galerie/border.jpg";
+    width:400px;
+    height:300px;
+    border: 20px solid transparent;
+    border-image: url(/resurse/img/galerie/border.jpg) 30 stretch;
+    position:relative;
+    overflow:hidden;
+    margin-bottom:5rem;
+  }
+  
+  .galerie figcaption{
+    position:absolute;
+    bottom:0;
+    background:rgba(255,255,255,0.7);
+    width:100%;
+    text-align:center;
+  }
+  .galerie figure{
+    position:relative;
+    width:400px;
+    height:300px;
+  }
+
+  
+  #galerie_exemplu figure{    
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:5;
+    animation-name:gal_exemplu;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    animation-fill-mode:forwards;
+    <% var variabila=locals.nr_imagini * 3%>
+    animation-duration:<%- variabila %>s;   
+    transform-origin:0px center;
+  }
+
+#galerie_exemplu:hover figure{    
+animation-play-state: paused;
+}
+
+@if <%- locals.nr_imagini %>==12 {
+  #galerie_exemplu figure:nth-of-type(12){
+    animation-delay:0s;
+  }
+  #galerie_exemplu figure:nth-of-type(11){
+    animation-delay:3s;
+  }
+  #galerie_exemplu figure:nth-of-type(10){
+    animation-delay:6s;
+  }
+  #galerie_exemplu figure:nth-of-type(9){
+    animation-delay:9s;
+  }
+  #galerie_exemplu figure:nth-of-type(8){
+    animation-delay:12s;
+  }
+  #galerie_exemplu figure:nth-of-type(7){
+    animation-delay:15s;
+  }
+  #galerie_exemplu figure:nth-of-type(6){
+    animation-delay:18s;
+  }
+  #galerie_exemplu figure:nth-of-type(5){
+    animation-delay:21s;
+  }
+  #galerie_exemplu figure:nth-of-type(4){
+    animation-delay:24s;
+  }
+  #galerie_exemplu figure:nth-of-type(3){
+    animation-delay:27s;
+  }
+  #galerie_exemplu figure:nth-of-type(2){
+    animation-delay:30s;
+  }
+  #galerie_exemplu figure:nth-of-type(1){
+    animation-delay:33s;
+  }
+}
+
+@if <%- locals.nr_imagini %>==10 {
+  #galerie_exemplu figure:nth-of-type(10){
+    animation-delay:0s;
+  }
+  #galerie_exemplu figure:nth-of-type(9){
+    animation-delay:3s;
+  }
+  #galerie_exemplu figure:nth-of-type(8){
+    animation-delay:6s;
+  }
+  #galerie_exemplu figure:nth-of-type(7){
+    animation-delay:9s;
+  }
+  #galerie_exemplu figure:nth-of-type(6){
+    animation-delay:12s;
+  }
+  #galerie_exemplu figure:nth-of-type(5){
+    animation-delay:15s;
+  }
+  #galerie_exemplu figure:nth-of-type(4){
+    animation-delay:18s;
+  }
+  #galerie_exemplu figure:nth-of-type(3){
+    animation-delay:21s;
+  }
+  #galerie_exemplu figure:nth-of-type(2){
+    animation-delay:24s;
+  }
+  #galerie_exemplu figure:nth-of-type(1){
+    animation-delay:27s;
+  }
+}
+
+@if <%- locals.nr_imagini %>==8 {
+  #galerie_exemplu figure:nth-of-type(8){
+    animation-delay:0s;
+  }
+  #galerie_exemplu figure:nth-of-type(7){
+    animation-delay:3s;
+  }
+  #galerie_exemplu figure:nth-of-type(6){
+    animation-delay:6s;
+  }
+  #galerie_exemplu figure:nth-of-type(5){
+    animation-delay:9s;
+  }
+  #galerie_exemplu figure:nth-of-type(4){
+    animation-delay:12s;
+  }
+  #galerie_exemplu figure:nth-of-type(3){
+    animation-delay:15s;
+  }
+  #galerie_exemplu figure:nth-of-type(2){
+    animation-delay:18s;
+  }
+  #galerie_exemplu figure:nth-of-type(1){
+    animation-delay:21s;
+  }
+}
+
+@if <%- locals.nr_imagini %>==6 {
+  #galerie_exemplu figure:nth-of-type(6){
+    animation-delay:0s;
+  }
+  #galerie_exemplu figure:nth-of-type(5){
+    animation-delay:3s;
+  }
+  #galerie_exemplu figure:nth-of-type(4){
+    animation-delay:6s;
+  }
+  #galerie_exemplu figure:nth-of-type(3){
+    animation-delay:9s;
+  }
+  #galerie_exemplu figure:nth-of-type(2){
+    animation-delay:12s;
+  }
+  #galerie_exemplu figure:nth-of-type(1){
+    animation-delay:15s;
+  }
+}
+
+@keyframes gal_exemplu{ 
+<% var variabila= 100 / locals.nr_imagini %>
+animation-duration:<%- variabila %>s; 
+0% {z-index:10;opacity:1;} /*perioada 0-5% in care se afiseaza fara efect */
+<%- 40 * variabila / 100 %>%{opacity:0.7;transform: translateX(30%);} /* de  aici doresc sa descresc si opacitatea;*/
+<%- 80 * variabila / 100 %>%{opacity:0.4;transform: translateX(-30%)}
+<%- variabila %>%{opacity:0;z-index:10;transform: translateX(100%)}
+<%- variabila + 1 %>%{opacity:0;z-index:0;transform: translateX(0%)}
+<%- variabila * (locals.nr_imagini - 1) %>%{z-index:0;}
+100%{opacity:1;z-index:5;}
+}
+

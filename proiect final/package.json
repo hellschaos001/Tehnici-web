@@ -1,0 +1,33 @@
+{
+  "name": "etapa-3",
+  "version": "1.0.0",
+  "description": "Got it!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "telefon",
+    "telefoane",
+    "gsm",
+    "service",
+    "AxP",
+    "Got",
+    "it!"
+  ],
+  "author": "Preda Alexandru-Florin",
+  "license": "ISC",
+  "dependencies": {
+    "css": "^3.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "pg": "^8.7.1",
+    "sass": "^1.49.0"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}

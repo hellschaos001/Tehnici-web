@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+	<head>
+        <meta name="keywords" content="telefon, telefoane, gsm, service, AxP">
+		<meta name="description" content="Got it!"> 
+		<link rel="stylesheet" href="/resurse/produse.css" type="text/css" />
+		<title>Magazin de telefoane si gsm - Home</title>
+        <%- include("../fragmente/head.ejs") %>
+		<script type="text/javascript" src=/resurse/js/produse.js></script>
+	</head>
+	
+	<body>
+		<%- include("../fragmente/header.ejs") %>
+
+		<main>
+			<label> Nume: <input type="text" id="inp-nume"></label>
+			<label> Cuvant cheie descriere: <input type="text" id="inp-descriere"></label>
+			<div> Tip produs:<!-- trebuie sa aiba acelasi name ca sa formeze un grup -->
+				<label>Samsung
+					<input id="i_rad1"  name="gr_rad" value="1" type="radio"/>
+				</label>
+				<label>Apple
+					<input id="i_rad2"  name="gr_rad" value="2" type="radio"/>
+				</label>
+				<label>Huawei
+					<input id="i_rad3" name="gr_rad" value="3" type="radio"/>
+				</label>
+				<label>Toate
+					<input id="i_rad4" checked name="gr_rad" value="4" type="radio"/>
+				</label>
+			</div>
+	
+	
+			<label> Pret minim: 0 <input type="range" id="inp-pret" value="0" min="0"  max="4500"> 4500 <span id="infoRange">(0)</span></label>
+
+			<label>Select simplu:
+				<select id="inp-categorie_simplu">
+					<option id="sel-toate" selected value="toate">toate</option>
+					<option value = "true">promotie</option>
+					<option value = "false">nonpromotie</option>
+				</select>
+			</label>
+			<br>
+			<label>Select multiplu:
+				<br>
+				<select id="inp-categorie_multiplu" multiple="multiple">
+					<option id="sel-toate" selected value="toate">toate</option>
+						<% for (let opt of locals.culori) { %>
+							<option value="<%- opt %>"><%- opt %> </option>
+						<% } %>
+				</select>
+			</label>
+			<br>
+			Afiseaza doar noutatile: <input type="checkbox" name="check_box" autocomplete="off">
+			
+			<p>
+			<button id="filtrare">Filtreaza</button> <button id="resetare">Reseteaza</button><br/>
+			<button id="sortCrescNume">Sorteaza crescator dupa nume si raportul dimensiune/pret</button>
+			<button id="sortDescrescNume">Sorteaza descrescator dupa nume si raportul dimensiune/pret</button>
+			
+			</p>
+			
+			<p id="p-suma">Apăsați Alt+"c" pentru suma preturilor produselor afișate. </p>
+
+			<hr>
+
+			<section id="produse">
+				<div class="grid-produse">
+					<% for( let prod of locals.produse) { %>
+						<article class="produs" >
+							<h3 class="nume"><a href="/produs/<%-prod.id %>" ><span class="val-nume"><%- prod.nume%></span></a></h3>
+							<div class = "container_produs">
+								<div class="info-prod">
+									<div class="detalii_produs">
+										<span hidden class="val-promotie"><%- prod.promotie%></span>
+										<span hidden class="val-dimensiune"><%- prod.dimensiune%></span>
+										<span hidden class="val-data_lansarii"><%- prod.data_lansarii%></span>
+										
+										<table class="tabel_produs">
+											<tr>
+												<th>Pret</th>
+												<th><span class="val-pret"><%- prod.pret%></span>RON</th>
+											</tr>
+											<tr>
+												<th>Descriere</th>
+												<th><span class="val-descriere"><%- prod.descriere%></span></th>
+
+											</tr>
+											<tr>
+												<th>Culoare</th>
+												<th><span class="val-culoare"><%- prod.culoare%></span></th>
+											</tr>
+											<tr>
+												<th>Data aparitiei</th>
+												<% 
+													var d="";
+													var zi="";
+													var nume_luna="";
+													var an="";
+													var zi_saptamana="";
+													d=prod.data_lansarii;
+													nume_luna=String(d).substr(3,4);
+													an=String(d).substr(7,8);
+													zi=an.substr(0,3);
+													//01-12-200
+													an=an.substr(3);
+													zi_saptamana=String(d).substr(0,3);
+													if(nume_luna==" Apr")
+														nume_luna="Aprilie";
+													if(nume_luna==" Jan")
+														nume_luna="Ianuarie";
+													if(nume_luna==" Feb")
+														nume_luna="Februarie";
+													if(nume_luna==" Mar")
+														nume_luna="Martie";
+													if(nume_luna==" May")
+														nume_luna="Mai";
+													if(nume_luna==" Jun")
+														nume_luna="Iunie";
+													if(nume_luna==" Jul")
+														nume_luna="Iulie";
+													if(nume_luna==" Oct")
+														nume_luna="Octombrie";
+													if(nume_luna==" Sep")
+														nume_luna="Septembrie";
+													if(nume_luna==" Nov")
+														nume_luna="Noiembrie";
+													if(nume_luna==" Dec")
+														nume_luna="Decembrie";
+													if(nume_luna==" Aug")
+														nume_luna="August";
+		
+													if(zi_saptamana=="Mon")
+														zi_saptamana="Luni";
+													if(zi_saptamana=="Tue")
+														zi_saptamana="Marti";
+													if(zi_saptamana=="Wed")
+														zi_saptamana="Miercuri";
+													if(zi_saptamana=="Thu")
+														zi_saptamana="Joi";
+													if(zi_saptamana=="Fri")
+														zi_saptamana="Vineri";
+													if(zi_saptamana=="Sat")
+														zi_saptamana="Sambata";
+													if(zi_saptamana=="Sun")
+														zi_saptamana="Duminca";
+												%>
+												<th><span class="data"><%- zi_saptamana %> <%- zi %> <%- nume_luna %> <%- an %>  </span></th>
+											</tr>
+											<tr>
+												<%
+														var rez="";
+														if(prod.promotie==true)
+															rez="Da";
+														else
+															rez="Nu";
+												%>
+												<th>Reducere:</th><!--<%- prod.rezistenta_soc %>-->
+												
+												<th><span class="promotie"><%- rez %></span></th>
+											</tr>
+										</table>
+
+										
+
+									</div>
+									
+									<figure id="poza_produs">
+										<a href="/produs/<%-prod.id %>" ><img src="/resurse/img/produse/<%- prod.imagine %>" style="width:350px;height:400px;" alt="[imagine <%- prod.nume %>]" /></a>
+									</figure>
+									<!--
+									<p class="pret">Pret: <span class="val-pret"><%- prod.pret%></span></p>
+									<p class="model">Model: <span class="val-model"><%- prod.model%></span></p>
+									<p class="tip">Tip: <span class="val-tip"><%- prod.tip%></span></p>
+									<p>Rezistenta soc: <span class="rez_soc"><%- prod.rezistenta_soc %> </span></p>
+									-->
+								</div>
+							</div>
+							
+
+							<label class="selecteaza-cos">
+								Selectează:<br/>
+								<input type="checkbox" class="select-cos" value="<%-prod.id %>" autocomplete="off">
+							</label>
+
+							<div id="coloana_doi">
+
+								<section id="sectiune_specificatii">
+									<p>Specificatii: </p>
+									<p id="val-specificatii"><%- prod.specificatii %></p>
+								</section>
+								
+								<section id ="tip_produs">
+									<p>Categoria produsului:<span class="val-tip_produs"><%- prod.tip_produs %></span></p>
+								</section>
+							</div>
+
+							
+						</article>
+					<% }%>
+				</div>
+			</section>
+		</main>
+    	<%- include("../fragmente/footer.ejs") %>
+	</body>
+</html> 
